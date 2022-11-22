@@ -1,0 +1,31 @@
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const theme = ref('light');
+
+const changeTheme = () => {
+	theme.value = theme.value === 'light' ? 'dark' : 'light';
+};
+</script>
+
+<template>
+	<v-app :theme="theme">
+		<v-app-bar>
+			<v-spacer></v-spacer>
+
+			<v-btn
+				:prepend-icon="
+					theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'
+				"
+				@click="changeTheme"
+				>Toggle Theme</v-btn
+			>
+		</v-app-bar>
+
+		<v-main>
+			<v-container>Content area</v-container>
+		</v-main>
+	</v-app>
+</template>
+
+<style scoped></style>
