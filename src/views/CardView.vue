@@ -1,31 +1,26 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import Card from "@/components/Card/index.vue";
+import { AnimalType } from "@/utils/constant";
+import { computed } from "vue";
 
-const theme = ref('light');
+const urlParams = window.location.search;
+console.log("urlParams", urlParams);
+const color = computed(() => Number(urlParams.split("&")[0].split("=")[1]) ?? 0);
+const animal = computed(() => Number(urlParams.split("&")[1].split("=")[1]) ?? 0);
 
-const changeTheme = () => {
-	theme.value = theme.value === 'light' ? 'dark' : 'light';
-};
+// const cardType = () => {
+//   switch (animal) {
+//     case AnimalType.TIGER:
+// 			if()
+//       break;
+//     case AnimalType.RABBIT:
+//       break;
+//   }
+// };
 </script>
 
 <template>
-	<v-app :theme="theme">
-		<v-app-bar>
-			<v-spacer></v-spacer>
-
-			<v-btn
-				:prepend-icon="
-					theme === 'light' ? 'mdi-weather-sunny' : 'mdi-weather-night'
-				"
-				@click="changeTheme"
-				>Toggle Theme</v-btn
-			>
-		</v-app-bar>
-
-		<v-main>
-			<v-container>Content area</v-container>
-		</v-main>
-	</v-app>
+  <Card class="h-screen pt-14" />
 </template>
 
 <style scoped></style>

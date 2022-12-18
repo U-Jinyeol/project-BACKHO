@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="59" height="54" viewBox="0 0 59 54">
+    <g data-name="Group 91" transform="translate(-52 -74)">
+        <path data-name="Path 455" d="M1.294 9.364a1 1 0 0 1-.871-1.488 17.4 17.4 0 0 1 5.956-6.062 30.693 30.693 0 0 1 7.2-2.79 1 1 0 0 1 1.2.754 1 1 0 0 1-.754 1.2 29.182 29.182 0 0 0-6.681 2.588 15.6 15.6 0 0 0-5.177 5.289 1 1 0 0 1-.873.509z" transform="rotate(-163 61.65 47.293)" style="fill:#3a2811"/>
+        <path data-name="Path 460" d="M82.394 67.538a12.854 12.854 0 0 0 5.15-1.138 13.357 13.357 0 0 0 4.356-4.461c1.827-2.665 3.608-5.539 3.878-8.743 1.033-12.576-19.7-22.981-27.727-11.932-8.833 12.142.21 27.218 14.343 26.275" transform="translate(3.185 58.654)" style="fill:#fff"/>
+        <path data-name="Path 453" d="M3.118 11c.237 6.865 14.457 16.358 10.5 16.358-7.542.721-13.3-8.075-13.3-15.531S2.893 4.42 3.118 11z" transform="translate(67.738 98)" style="fill:#e3e3e3"/>
+        <path data-name="Rectangle 24" d="M3 0h24a3 3 0 0 1 3 3H0a3 3 0 0 1 3-3z" transform="translate(69 125)" style="fill:#fff"/>
+        <path data-name="Path 454" d="M1361.935 108.943c-1.837 0-5.523-.207-8.229-1.7-3.734-2.055-5.378-6.4-5.446-6.582a1 1 0 1 1 1.875-.7c.014.037 1.464 3.835 4.535 5.525 3.148 1.733 8.213 1.426 8.263 1.423a1 1 0 0 1 .132 2c-.059.008-.478.034-1.13.034z" transform="rotate(-17 711.13 4437.499)" style="fill:#3a2811"/>
+        <circle data-name="Ellipse 40" cx="1" cy="1" r="1" transform="translate(98 98)" style="fill:#fff"/>
+        <circle data-name="Ellipse 41" cx="1" cy="1" r="1" transform="translate(109 82)" style="fill:#fff"/>
+        <circle data-name="Ellipse 42" cx="1.5" cy="1.5" r="1.5" transform="translate(61 74)" style="fill:#fff"/>
+        <path data-name="Path 459" d="M8.5 0a8.5 8.5 0 0 1 0 17c-4.694 0-8.621-5.639-7.284-8.008S3.806 0 8.5 0z" transform="translate(74 85)" style="fill:#e3e3e3"/>
+        <path data-name="Path 458" d="M67.374 41.842a9.257 9.257 0 0 0 10.533-2.273 10.977 10.977 0 0 0 2.393-6.8 9.27 9.27 0 0 0-1.191-5.226c-2.594-4.143-11.264-5.475-14.929-2.151-5.066 4.6-2.623 13.877 3.194 16.45" transform="translate(12.036 58.401)" style="fill:#fff"/>
+        <circle data-name="Ellipse 37" cx="1" cy="1" r="1" transform="rotate(28 -132.748 220.643)" style="fill:#262121"/>
+        <circle data-name="Ellipse 38" cx="1" cy="1" r="1" transform="rotate(28 -136.748 204.6)" style="fill:#262121"/>
+        <path data-name="Path 452" d="M6.5 1c3.59 0 6.5-.328 6.5.5S10.09 3 6.5 3 0 3.445 0 1.5 2.91 1 6.5 1z" transform="translate(83 90)" style="fill:#ff8d1c"/>
+    </g>
+</svg>
