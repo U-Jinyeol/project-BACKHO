@@ -3,13 +3,15 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     backgroundImage: {
-      "main-bg": "url('./src/assets/image/main/main-bg.webp')",
-      "select-color-yellow": "url('./src/assets/image/main/select-color-yellow.png')",
-      "select-color-white": "url('./src/assets/image/main/select-color-white.png')",
-      "select-animal-tiger": "url('./src/assets/image/main/select-animal-tiger.webp')",
-      "select-animal-rabbit": "url('./src/assets/image/main/select-animal-rabbit.webp')",
-      "select-result-tiger": "url('./src/assets/image/main/select-result-tiger.webp')",
-      "select-result-rabbit": "url('./src/assets/image/main/select-result-rabbit.webp')",
+      "main-bg": "url('@/assets/images/home/home-bg.png')",
+      "select-color-yellow": "url('@/assets/images/home/select-color-yellow.png')",
+      "select-color-white": "url('@/assets/images/home/select-color-white.png')",
+      "select-animal-tiger": "url('@/assets/images/home/select-animal-tiger.webp')",
+      "select-animal-rabbit": "url('@/assets/images/home/select-animal-rabbit.webp')",
+      "select-result-tiger": "url('@/assets/images/home/select-result-tiger.webp')",
+      "select-result-rabbit": "url('@/assets/images/home/select-result-rabbit.webp')",
+      "card-bg-yellow": "url('@/assets/images/card/card-bg-yellow.webp')",
+      "card-bg-white": "url('@/assets/images/card/card-bg-white.webp')",
     },
     fontFamily: {
       Rubik: ["Rubik Gemstones"],
@@ -23,6 +25,8 @@ module.exports = {
         200: "#2a825c",
         300: "#387f1b",
         400: "#0e4c34",
+        500: "#C9F3E3",
+        600: "#10593d",
       },
       red: {
         100: "#f3cbc9",

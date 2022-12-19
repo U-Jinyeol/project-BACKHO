@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import TigerRed from "./Tiger/Red.vue";
-import TigerGreen from "./Tiger/Green.vue";
-import TigerYellow from "./Tiger/Yellow.vue";
-import TigerWhite from "./Tiger/White.vue";
-
 import CopyRight from "../CopyRight.vue";
 import { computed, ref } from "vue";
 import { AnimalType, ColorType } from "@/utils/constant";
 import axios from "axios";
-import { useRouter } from "vue-router";
+import { useRoute, useRouter } from "vue-router";
+import { shareKakao } from "./kakaoShare";
+import TigerRed from "@/components/Result/Tiger/Red.vue";
+import TigerGreen from "@/components/Result/Tiger/Green.vue";
+import TigerYellow from "@/components/Result/Tiger/Yellow.vue";
+import TigerWhite from "@/components/Result/Tiger/White.vue";
 
 interface ICard {
   to: string;
@@ -19,23 +19,19 @@ interface ICard {
 const urlParams = window.location.search;
 const color = computed(() => Number(urlParams.split("&")[0].split("=")[1]) ?? 0);
 const animal = computed(() => Number(urlParams.split("&")[1].split("=")[1]) ?? 0);
-const cardContent = ref({
+
+const cardData = ref({
   to: "",
   from: "",
   content: "",
+  cardId: "",
 });
-const setCard = (card: ICard) => {
-  cardContent.value = card;
-};
+
+const { params } = useRoute();
 const router = useRouter();
 
-const addCard = async () => {
-  try {
-    const { data } = await axios.post("https://doremilan.shop/card", cardContent.value);
-    router.push(`/result/${data.card.cardId}?color=${color.value}&animal=${animal.value}`);
-  } catch (e) {
-    console.log(e);
-  }
+const returnToStart = () => {
+  router.push("/");
 };
 
 const selectBg = computed(() => {
@@ -56,50 +52,60 @@ const selectBg = computed(() => {
   }
   return bgcolor;
 });
+
+const fetchCard = async () => {
+  try {
+    const { data } = await axios.get(`https://doremilan.shop/card/${params.id}`);
+    cardData.value = data;
+  } catch (e) {
+    console.log(e);
+  }
+};
+fetchCard();
 </script>
 
 <template>
-  <div :class="`h-auto ${selectBg}`">
+  <div :class="`h-auto ${selectBg} pt-14 pb-10`">
     <div v-if="animal === AnimalType.TIGER">
       <div v-if="color === ColorType.RED">
-        <TigerRed class="px-4" @update="setCard" />
+        <TigerRed :cardData="cardData" class="px-4" />
       </div>
       <div v-else-if="color === ColorType.GREEN">
-        <TigerGreen class="px-4" @update="setCard" />
+        <TigerGreen :cardData="cardData" class="px-4" />
       </div>
       <div v-else-if="color === ColorType.YELLOW">
-        <TigerYellow class="px-4" @update="setCard" />
+        <TigerYellow :cardData="cardData" class="px-4" />
       </div>
       <div v-else>
-        <TigerWhite class="px-4" @update="setCard" />
+        <TigerWhite :cardData="cardData" class="px-4" />
       </div>
     </div>
 
-    <div v-else>
+    <!-- <div v-else>
       <div v-if="color === ColorType.RED">
-        <TigerRed class="px-4" @update="setCard" />
+        <TigerRed class="px-4" />
       </div>
       <div v-else-if="color === ColorType.GREEN">
-        <TigerGreen class="px-4" @update="setCard" />
+        <TigerGreen class="px-4" />
       </div>
       <div v-else-if="color === ColorType.YELLOW">
-        <TigerYellow class="px-4" @update="setCard" />
+        <TigerYellow class="px-4" />
       </div>
       <div v-else>
-        <TigerWhite class="px-4" @update="setCard" />
+        <TigerWhite class="px-4" />
       </div>
-    </div>
+    </div> -->
 
-    <div class="flex flex-col justify-center">
-      <button
-        @click="addCard"
-        class="py-2 mx-auto mt-20 mb-2 text-2xl text-black bg-green-100 rounded-lg w-80 font-Saemaul"
-      >
-        작성 완료
-      </button>
+    <div class="flex flex-col justify-center mt-6">
+      <button @click="shareKakao()" class="bg-yellow-200 btn-style">카카오톡 전송</button>
+      <button @click="returnToStart" class="bg-green-100 btn-style">처음으로</button>
       <CopyRight />
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+.btn-style {
+  @apply py-2 mx-auto mb-2 text-2xl text-black rounded-lg w-80 font-Saemaul;
+}
+</style>

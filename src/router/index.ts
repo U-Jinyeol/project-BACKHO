@@ -1,25 +1,33 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-import HomeView from "@/views/HomeView.vue";
-import CardView from "@/views/CardView.vue";
+import Home from "@/views/Home.vue";
+import Card from "@/views/Card.vue";
+import Result from "@/views/Result.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: HomeView,
+    component: Home,
   },
   {
     path: "/card",
     name: "Card",
-    component: CardView,
-    props: true,
+    component: Card,
+  },
+  {
+    path: "/result/:id",
+    name: "Result",
+    component: Result,
   },
 ];
 
 const router = createRouter({
   history: createWebHistory("/"),
   routes,
+  scrollBehavior() {
+    return { top: 0 };
+  },
 });
 
 export default router;

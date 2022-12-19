@@ -18,11 +18,11 @@ const selectAnimal = (animal: AnimalType) => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center h-screen">
+  <div class="flex flex-col items-center h-auto pb-10 pt-14">
     <div class="flex flex-col mb-20">
       <div class="flex items-end justify-between px-4 mx-auto w-72">
-        <img src="@/assets/image/main/select-color-snow.svg" alt="" />
-        <img src="@/assets/image/main/select-color-tree.svg" alt="" />
+        <img src="@/assets/images/home/select-color-snow.svg" alt="" />
+        <img src="@/assets/images/home/select-color-tree.svg" alt="" />
       </div>
 
       <div class="w-full py-10 text-xl text-center text-black bg-green-100 rounded-2xl font-Saemaul px-14">
@@ -33,17 +33,17 @@ const selectAnimal = (animal: AnimalType) => {
     <div class="flex items-center gap-8">
       <div
         :class="{ 'is-active': selectItem === 0 }"
-        class="bg-select-animal-tiger select-animal"
+        class="bg-green-500 bg-select-animal-tiger select-animal"
         @click="selectAnimal(0)"
       />
       <div
         :class="{ 'is-active': selectItem === 1 }"
-        class="bg-select-animal-rabbit select-animal"
+        class="bg-green-500 bg-select-animal-rabbit select-animal"
         @click="selectAnimal(1)"
       />
     </div>
 
-    <button @click="nextStep" class="py-3 mb-2 text-2xl text-black bg-green-100 rounded-lg w-80 font-Saemaul mt-44">
+    <button @click="nextStep" class="py-2 mt-40 mb-2 text-2xl text-black bg-green-100 rounded-lg w-80 font-Saemaul">
       선택완료
     </button>
     <CopyRight />
@@ -52,7 +52,7 @@ const selectAnimal = (animal: AnimalType) => {
 
 <style lang="scss" scoped>
 .select-animal {
-  @apply bg-center border-4 border-white bg-no-repeat bg-cover rounded-full w-28 h-28;
+  @apply bg-center border-4 border-white bg-no-repeat bg-contain rounded-full w-28 h-28;
 }
 
 .is-active {

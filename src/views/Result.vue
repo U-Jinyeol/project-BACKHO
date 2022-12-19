@@ -1,7 +1,9 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Result from "@/components/Result/index.vue";
+</script>
 
 <template>
-  <div>Result</div>
+  <Result />
 </template>
 
 <style scoped></style>

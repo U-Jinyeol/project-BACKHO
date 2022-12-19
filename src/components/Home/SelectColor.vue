@@ -17,11 +17,11 @@ const selectColor = (color: ColorType) => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center h-screen">
+  <div class="flex flex-col items-center h-auto pb-10 pt-14">
     <div class="flex flex-col mb-28">
       <div class="flex items-end justify-between px-4 mx-auto w-72">
-        <img src="@/assets/image/main/select-color-snow.svg" alt="" />
-        <img src="@/assets/image/main/select-color-tree.svg" alt="" />
+        <img src="@/assets/images/home/select-color-snow.svg" alt="" />
+        <img src="@/assets/images/home/select-color-tree.svg" alt="" />
       </div>
 
       <div class="w-full py-10 text-xl text-center text-black bg-green-100 rounded-2xl font-Saemaul px-14">
@@ -45,7 +45,7 @@ const selectColor = (color: ColorType) => {
       />
     </div>
 
-    <button @click="nextStep" class="py-3 mb-2 text-2xl text-black bg-green-100 rounded-lg w-80 font-Saemaul mt-44">
+    <button @click="nextStep" class="py-2 mb-2 text-2xl text-black bg-green-100 rounded-lg w-80 font-Saemaul mt-44">
       다음
     </button>
     <CopyRight />

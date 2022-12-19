@@ -6,7 +6,7 @@ import SelectResult from "@/components/Home/SelectResult.vue";
 
 import { ref } from "vue";
 import type { ColorType, AnimalType } from "@/utils/constant";
-import { useRoute, useRouter } from "vue-router";
+import { useRouter } from "vue-router";
 
 const router = useRouter();
 const step = ref(1);
@@ -15,16 +15,15 @@ const selectAnimal = ref();
 
 const nextStep = () => {
   step.value++;
+  window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 };
 
 const setColor = (color: ColorType) => {
-  console.log("ColorType", color);
   selectColor.value = color;
   nextStep();
 };
 
 const setAnimal = (animal: AnimalType) => {
-  console.log("AnimalType", animal);
   selectAnimal.value = animal;
   nextStep();
 };
@@ -35,7 +34,7 @@ const moveToCard = () => {
 </script>
 
 <template>
-  <div class="bg-green-200 pt-14">
+  <div class="bg-green-200">
     <Start v-if="step === 1" @update="nextStep" />
     <SelectColor v-else-if="step === 2" @update-color="setColor" />
     <SelectAnimal v-else-if="step === 3" @update-animal="setAnimal" />
