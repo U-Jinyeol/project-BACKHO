@@ -1,7 +1,15 @@
-module.exports = {
-  purge: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+import { defineConfig } from "vite-plugin-windicss";
+
+export default defineConfig({
+  preflight: false,
+  attributify: false,
+  transformCSS: "pre",
+  darkMode: false,
   theme: {
+    fontFamily: {
+      Rubik: ["Rubik Gemstones", "sans-serif"],
+      Saemaul: ["HSSaemaul-Regular", "sans-serif"],
+    },
     backgroundImage: {
       "main-bg": "url('@/assets/images/home/home-bg.png')",
       "select-color-yellow": "url('@/assets/images/home/select-color-yellow.png')",
@@ -12,10 +20,6 @@ module.exports = {
       "select-result-rabbit": "url('@/assets/images/home/select-result-rabbit.webp')",
       "card-bg-yellow": "url('@/assets/images/card/card-bg-yellow.webp')",
       "card-bg-white": "url('@/assets/images/card/card-bg-white.webp')",
-    },
-    fontFamily: {
-      Rubik: ["Rubik Gemstones"],
-      Saemaul: ["HSSaemaul-Regular"],
     },
     colors: {
       black: "#000000",
@@ -46,8 +50,4 @@ module.exports = {
       },
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-};
+});

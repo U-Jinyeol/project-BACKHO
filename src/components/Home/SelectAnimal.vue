@@ -18,14 +18,14 @@ const selectAnimal = (animal: AnimalType) => {
 </script>
 
 <template>
-  <div class="flex flex-col items-center h-auto pb-10 pt-14">
+  <div class="flex flex-col items-center h-auto bg-green-200 pb-10 pt-14 px-16px mx-auto">
     <div class="flex flex-col mb-20">
       <div class="flex items-end justify-between px-4 mx-auto w-72">
         <img src="@/assets/images/home/select-color-snow.svg" alt="" />
         <img src="@/assets/images/home/select-color-tree.svg" alt="" />
       </div>
 
-      <div class="w-full py-10 text-xl text-center text-black bg-green-100 rounded-2xl font-Saemaul px-14">
+      <div class="w-288px py-10 text-xl text-center text-black bg-green-100 rounded-2xl font-Saemaul mx-auto">
         그 사람이 좋아하는<br />
         동물은 무엇인가요?
       </div>
@@ -42,9 +42,11 @@ const selectAnimal = (animal: AnimalType) => {
         @click="selectAnimal(1)"
       />
     </div>
-
-    <button @click="nextStep" class="py-2 mt-40 mb-2 text-2xl text-black bg-green-100 rounded-lg w-80 font-Saemaul">
-      선택완료
+    <button
+      @click="nextStep"
+      class="py-2 mb-2 border-none text-2xl text-black bg-green-100 rounded-lg max-w-328px w-full font-Saemaul mt-44"
+    >
+      다음
     </button>
     <CopyRight />
   </div>
@@ -52,10 +54,10 @@ const selectAnimal = (animal: AnimalType) => {
 
 <style lang="scss" scoped>
 .select-animal {
-  @apply bg-center border-4 border-white bg-no-repeat bg-contain rounded-full w-28 h-28;
+  @apply bg-center border-solid border-3px border-white bg-no-repeat bg-contain rounded-full w-28 h-28;
 }
 
 .is-active {
-  @apply border-4 border-dashed border-red-200;
+  @apply border-dashed border-red-200;
 }
 </style>

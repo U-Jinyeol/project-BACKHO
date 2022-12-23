@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import TigerRed from "./Tiger/Red.vue";
-import TigerGreen from "./Tiger/Green.vue";
-import TigerYellow from "./Tiger/Yellow.vue";
-import TigerWhite from "./Tiger/White.vue";
-
 import CopyRight from "../CopyRight.vue";
 import { computed, ref } from "vue";
-import { AnimalType, ColorType } from "@/utils/constant";
+import { ColorType } from "@/utils/constant";
 import axios from "axios";
 import { useRouter } from "vue-router";
+import Item from "@/components/Card/Item.vue";
 
 interface ICard {
   to: string;
@@ -30,6 +26,10 @@ const setCard = (card: ICard) => {
 const router = useRouter();
 
 const addCard = async () => {
+  if (cardContent.value.to === "") return alert("to를 작성해주세요");
+  if (cardContent.value.from === "") return alert("from을 작성해주세요");
+  if (cardContent.value.content === "") return alert("내용을 작성해주세요");
+
   try {
     const { data } = await axios.post("https://doremilan.shop/card", cardContent.value);
     router.push(`/result/${data.card.cardId}?color=${color.value}&animal=${animal.value}`);
@@ -59,41 +59,13 @@ const selectBg = computed(() => {
 </script>
 
 <template>
-  <div :class="`h-auto ${selectBg}`">
-    <div v-if="animal === AnimalType.TIGER">
-      <div v-if="color === ColorType.RED">
-        <TigerRed class="px-4" @update="setCard" />
-      </div>
-      <div v-else-if="color === ColorType.GREEN">
-        <TigerGreen class="px-4" @update="setCard" />
-      </div>
-      <div v-else-if="color === ColorType.YELLOW">
-        <TigerYellow class="px-4" @update="setCard" />
-      </div>
-      <div v-else>
-        <TigerWhite class="px-4" @update="setCard" />
-      </div>
-    </div>
+  <div :class="`h-screen ${selectBg}`">
+    <Item class="px-4" :color="color" :animal="animal" @update="setCard" />
 
-    <div v-else>
-      <div v-if="color === ColorType.RED">
-        <TigerRed class="px-4" @update="setCard" />
-      </div>
-      <div v-else-if="color === ColorType.GREEN">
-        <TigerGreen class="px-4" @update="setCard" />
-      </div>
-      <div v-else-if="color === ColorType.YELLOW">
-        <TigerYellow class="px-4" @update="setCard" />
-      </div>
-      <div v-else>
-        <TigerWhite class="px-4" @update="setCard" />
-      </div>
-    </div>
-
-    <div class="flex flex-col justify-center">
+    <div class="flex flex-col items-center justify-center mt-24px px-16px">
       <button
         @click="addCard"
-        class="py-2 mx-auto mt-20 mb-2 text-2xl text-black bg-green-100 rounded-lg w-80 font-Saemaul"
+        class="py-2 mb-2 border-none text-2xl text-black bg-green-100 rounded-lg max-w-328px w-full font-Saemaul mt-84px"
       >
         작성 완료
       </button>

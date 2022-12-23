@@ -16,8 +16,8 @@ export const shareKakao = () => {
       objectType: "feed",
       content: {
         title: "Merry Christmas",
-        description: "Merry Christmas My Friend",
-        imageUrl: "https://i.ibb.co/CWVcTCM/Group-145-3x.webp",
+        description: "Merry Christmas Dear My Friend",
+        imageUrl: "https://ifh.cc/g/ZBVBHG.png",
         imageWidth: 600,
         imageHeight: 400,
         link: {

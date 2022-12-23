@@ -27,7 +27,7 @@ watch(
 );
 
 const updateTime = () => {
-  const today = moment.utc().format();
+  const today = moment().format();
   const diff = moment(endDate.value).diff(today);
   if (diff < 0) emit("update:timestampEnd", today);
   return (remainingDate.value = diff);
@@ -42,7 +42,7 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex justify-between text-3xl text-white w-28 font-Saemaul">
+  <div class="flex justify-between text-32px text-white max-w-180px w-full font-Saemaul">
     <p>
       {{ days }}
     </p>
@@ -60,5 +60,3 @@ onUnmounted(() => {
     </p>
   </div>
 </template>
-
-<style lang="scss" scoped></style>

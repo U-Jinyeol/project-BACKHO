@@ -34,8 +34,10 @@ const moveToCard = () => {
 </script>
 
 <template>
-  <div class="bg-green-200">
-    <Start v-if="step === 1" @update="nextStep" />
+  <div class="mx-auto bg-green-200 max-w-414px w-full h-screen">
+    <div v-if="step === 1" class="flex flex-col items-center px-4 bg-cover bg-center h-screen bg-main-bg">
+      <Start @update="nextStep" />
+    </div>
     <SelectColor v-else-if="step === 2" @update-color="setColor" />
     <SelectAnimal v-else-if="step === 3" @update-animal="setAnimal" />
     <SelectResult v-else :animal-type="selectAnimal" @write-card="moveToCard" />

@@ -15,15 +15,21 @@ time, mark, audio, video {
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
+  border: none;
+  outline: none;
 }
 /* make sure to set some focus styles for accessibility */
 button, input, select, textarea{
   font-size: 100%;
   margin: 0;
   vertical-align: baseline;
+  border: none;
+  outline: none;
 }
 button, input {
   line-height: normal;
+  border: none;
+  outline: none;
 }
 :focus {
   outline: 0;
