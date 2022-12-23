@@ -43,18 +43,12 @@ onUnmounted(() => {
 
 <template>
   <div class="flex justify-between text-32px text-white max-w-180px w-full font-Saemaul">
-    <p>
-      {{ days }}
-    </p>
-    :
-    <p>
-      {{ hours }}
-    </p>
-    :
-    <p>
-      {{ minutes }}
-    </p>
-    :
+    <p>{{ days }}:</p>
+
+    <p>{{ hours }}:</p>
+
+    <p>{{ minutes }}:</p>
+
     <p>
       {{ seconds }}
     </p>

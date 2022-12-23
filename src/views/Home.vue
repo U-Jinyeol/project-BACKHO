@@ -35,13 +35,55 @@ const moveToCard = () => {
 
 <template>
   <div class="mx-auto bg-green-200 max-w-414px w-full h-screen">
-    <div v-if="step === 1" class="flex flex-col items-center px-4 bg-cover bg-center h-screen bg-main-bg">
+    <div v-if="step === 1" class="flex flex-col items-center px-4 bg-cover bg-center h-screen bg-main-bg fade-in-box">
       <Start @update="nextStep" />
     </div>
-    <SelectColor v-else-if="step === 2" @update-color="setColor" />
-    <SelectAnimal v-else-if="step === 3" @update-animal="setAnimal" />
-    <SelectResult v-else :animal-type="selectAnimal" @write-card="moveToCard" />
+    <SelectColor v-else-if="step === 2" @update-color="setColor" class="fade-in-box" />
+    <SelectAnimal v-else-if="step === 3" @update-animal="setAnimal" class="fade-in-box" />
+    <SelectResult v-else :animal-type="selectAnimal" @write-card="moveToCard" class="fade-in-box" />
   </div>
 </template>
 
-<style lang="scss" scoped></style>
+<style>
+.fade-in-box {
+  animation: fadein 1s;
+  -moz-animation: fadein 1s; /* Firefox */
+  -webkit-animation: fadein 1s; /* Safari and Chrome */
+  -o-animation: fadein 1s; /* Opera */
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadein {
+  /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadein {
+  /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadein {
+  /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+</style>

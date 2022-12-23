@@ -18,7 +18,7 @@ const selectColor = (color: ColorType) => {
 
 <template>
   <div class="flex flex-col items-center h-auto bg-green-200 pb-10 pt-14 px-16px mx-auto">
-    <div class="flex flex-col mb-28">
+    <div class="flex flex-col justify-center mb-28">
       <div class="flex items-end justify-between px-4 mx-auto w-72">
         <img src="@/assets/images/home/select-color-snow.svg" alt="" />
         <img src="@/assets/images/home/select-color-tree.svg" alt="" />

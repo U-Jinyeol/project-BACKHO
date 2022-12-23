@@ -18,7 +18,7 @@ const nextStep = () => {
     </p>
     <button
       @click="nextStep"
-      class="py-2 mb-2 border-none text-2xl text-red-500 bg-red-100 rounded-lg font-Saemaul mt-359px max-w-328px w-full"
+      class="py-2 mb-2 border-none text-2xl text-red-500 bg-red-100 rounded-lg font-Saemaul mt-200px max-w-328px w-full"
     >
       시작하기
     </button>

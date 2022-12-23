@@ -19,7 +19,7 @@ const theEnd = (payload: Date) => {
 </script>
 
 <template>
-  <div v-if="!dDay" class="bg-red-200 w-150px px-5 py-2px bg-opacity-80">
+  <div v-if="!dDay" class="bg-red-200 w-150px px-5 py-2px bg-opacity-80 animate-bounce">
     <CountDownItem @update:timestampEnd="theEnd" :timestamp-end="salesDay" />
   </div>
 </template>

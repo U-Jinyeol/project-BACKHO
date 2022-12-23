@@ -3,7 +3,5 @@ import Result from "@/components/Result/index.vue";
 </script>
 
 <template>
-  <Result class="min-h-screen max-w-414px w-full mx-auto pb-10 pt-14" />
+  <Result class="min-h-screen max-w-414px w-full mx-auto pb-10 pt-14 fade-in-box" />
 </template>
-
-<style scoped></style>
