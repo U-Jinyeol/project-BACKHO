@@ -29,7 +29,7 @@ const selectBg = computed(() => {
   let tapeImg = "";
   switch (props.color) {
     case ColorType.RED:
-      bgcolor = "bg-red-300";
+      bgcolor = "bg-red-400";
       tapeImg = "card-tape";
       break;
     case ColorType.GREEN:
@@ -67,7 +67,7 @@ const selectBg = computed(() => {
         v-else
         src="@/assets/images/result/result-rabbit.webp"
         alt=""
-        class="mt-7 max-w-296px w-full mb-4 h-full mx-auto"
+        class="mt-7 max-w-296px w-full mb-4 h-full mx-auto animate-bounce"
       />
       <div class="relative flex flex-col">
         <img

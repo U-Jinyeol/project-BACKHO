@@ -17,7 +17,7 @@ export const shareKakao = () => {
       content: {
         title: "Merry Christmas",
         description: "Merry Christmas Dear My Friend",
-        imageUrl: "https://ifh.cc/g/ZBVBHG.png",
+        imageUrl: "https://ifh.cc/g/M6q1V9.jpg",
         imageWidth: 600,
         imageHeight: 400,
         link: {

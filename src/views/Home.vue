@@ -46,10 +46,10 @@ const moveToCard = () => {
 
 <style>
 .fade-in-box {
-  animation: fadein 1s;
-  -moz-animation: fadein 1s; /* Firefox */
-  -webkit-animation: fadein 1s; /* Safari and Chrome */
-  -o-animation: fadein 1s; /* Opera */
+  animation: fadein 3s;
+  -moz-animation: fadein 1.5s; /* Firefox */
+  -webkit-animation: fadein 1.5s; /* Safari and Chrome */
+  -o-animation: fadein 1.5s; /* Opera */
 }
 @keyframes fadein {
   from {
