@@ -23,7 +23,7 @@
 <img width="1490" alt="image" src="https://user-images.githubusercontent.com/100745412/210731372-c834a771-0666-45b8-abe5-18e6411ef4b8.png">
 <img width="1490" alt="image" src="https://user-images.githubusercontent.com/100745412/210731835-3d5f36e2-9f17-4295-ad1f-63b1d4a5a6d3.png">
 
-호랑이와 토끼가 메인 캐릭터로 호랑이해(2022)에서 토끼해(2023)으로 향하는 의미를 담았다.
+호랑이와 토끼가 메인 캐릭터로 호랑이해(2022)에서 토끼해(2023)로 향하는 의미를 담았다.
 
 ## 3. Result
 - 카드 생성 수 : 198개
